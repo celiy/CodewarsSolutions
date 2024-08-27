@@ -8,15 +8,12 @@
 
 //Courtesy of projecteuler.net (Problem 1)
 
-def solution(number):
-    if number < 0:
-        return 0
-    res = 0
-    for n in range(number):
-        if n % 3 == 0 and n % 5 == 0:
-            res+=n
-        elif n % 3 == 0:
-            res+=n
-        elif n % 5 == 0:
-            res+=n
-    return res
+function solution(number){
+  let sum = 0
+  for (let n=0;n<number;n++){
+    if (n % 3 === 0 || n % 5 === 0){
+      sum = sum + n
+    }
+  }
+  return sum
+}
